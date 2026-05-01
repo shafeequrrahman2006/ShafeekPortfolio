@@ -68,8 +68,40 @@ class Navbar extends StatelessWidget {
                             ),
                       ),
 
-                      // Center: Nav Links (Hide on very small screens)
-                      if (MediaQuery.of(context).size.width > 800)
+                      if (isMobile)
+                        PopupMenuButton<String>(
+                          icon: const Icon(Icons.more_vert, color: Colors.white),
+                          color: AppTheme.backgroundDark,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                            side: BorderSide(color: Colors.white.withOpacity(0.1)),
+                          ),
+                          onSelected: (value) {
+                            if (value == 'Home') onHomeTap();
+                            if (value == 'About') onAboutTap();
+                            if (value == 'Projects') onProjectsTap();
+                            if (value == 'Contact') onContactTap();
+                          },
+                          itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
+                            const PopupMenuItem<String>(
+                              value: 'Home',
+                              child: Text('Home', style: TextStyle(color: Colors.white)),
+                            ),
+                            const PopupMenuItem<String>(
+                              value: 'About',
+                              child: Text('About', style: TextStyle(color: Colors.white)),
+                            ),
+                            const PopupMenuItem<String>(
+                              value: 'Projects',
+                              child: Text('Projects', style: TextStyle(color: Colors.white)),
+                            ),
+                            const PopupMenuItem<String>(
+                              value: 'Contact',
+                              child: Text('Contact Me', style: TextStyle(color: AppTheme.accentRed)),
+                            ),
+                          ],
+                        )
+                      else
                         Row(
                           children: [
                             _NavBarLink(title: "Home", onTap: onHomeTap),
@@ -77,17 +109,16 @@ class Navbar extends StatelessWidget {
                             _NavBarLink(title: "About", onTap: onAboutTap),
                             const SizedBox(width: 32),
                             _NavBarLink(title: "Projects", onTap: onProjectsTap),
+                            const SizedBox(width: 32),
+                            ElevatedButton(
+                              onPressed: onContactTap,
+                              style: ElevatedButton.styleFrom(
+                                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 18),
+                              ),
+                              child: const Text("Contact Me"),
+                            ),
                           ],
                         ),
-
-                      // Right: Button
-                      ElevatedButton(
-                        onPressed: onContactTap,
-                        style: ElevatedButton.styleFrom(
-                          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 18),
-                        ),
-                        child: const Text("Contact Me"),
-                      ),
                     ],
                   ),
                 ),

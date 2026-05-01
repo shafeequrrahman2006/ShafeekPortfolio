@@ -706,16 +706,7 @@ class _DopamineDetoxPageState extends State<DopamineDetoxPage> {
         child: Column(
           children: [
             Text(
-              "NEXT PROJECT",
-              style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                fontSize: 12,
-                color: AppTheme.textGrey,
-                letterSpacing: 3,
-              ),
-            ),
-            const SizedBox(height: 24),
-            Text(
-              "Workshop",
+              "Next Project",
               style: Theme.of(context).textTheme.displayMedium,
             ),
             const SizedBox(height: 24),

@@ -473,15 +473,7 @@ class _ProjectDetailPageState extends State<ProjectDetailPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "NEXT PROJECT",
-                  style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                    fontSize: 12,
-                    color: Colors.white54,
-                  ),
-                ),
-                const SizedBox(height: 8),
-                Text(
-                  widget.nextProjectTitle ?? "Workshop",
+                  "Next Project",
                   style: Theme.of(context).textTheme.displaySmall?.copyWith(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
