@@ -53,8 +53,8 @@ class CoreMasteries extends StatelessWidget {
                       ),
                       _MasteryCard(
                         icon: Icons.phone_android,
-                        title: "Flutter Development",
-                        description: "Building responsive, high-performance mobile applications with clean UI and smooth interactions. Turning design concepts into real, functional products.",
+                        title: "Web Development with Ai",
+                        description: "Building intelligent, responsive web applications powered by modern AI technologies.",
                       ),
                       _MasteryCard(
                         icon: Icons.rocket_launch,

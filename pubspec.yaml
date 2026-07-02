@@ -64,6 +64,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/Project2/
+    - assets/images/Project5/
     - assets/Project1/
     - assets/Project3/
     - assets/Project4/

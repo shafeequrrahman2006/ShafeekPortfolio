@@ -259,7 +259,7 @@ class _FeaturedProjectState extends State<FeaturedProject> {
                 // Cover Image Background
                 SizedBox(
                   width: double.infinity,
-                  height: isMobile ? 180 : 240,
+                  height: isMobile ? 280 : 240,
                   child: Image.asset(
                     'assets/video/workshop coverimage.png',
                     fit: BoxFit.cover,
@@ -267,48 +267,48 @@ class _FeaturedProjectState extends State<FeaturedProject> {
                         Container(color: Colors.grey[900]),
                   ),
                 ),
-              Positioned.fill(
-                child: Container(
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [
-                        Colors.black.withOpacity(0.3),
-                        Colors.black.withOpacity(0.8),
-                      ],
+                Positioned.fill(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          Colors.black.withOpacity(0.3),
+                          Colors.black.withOpacity(0.8),
+                        ],
+                      ),
                     ),
                   ),
                 ),
-              ),
-              Positioned(
-                bottom: 40,
-                left: 40,
-                right: 40,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Icon(
-                      Icons.play_circle_outline,
-                      color: AppTheme.textWhite,
-                      size: 32,
-                    ),
-                    const SizedBox(height: 32),
-                    Text(
-                      "Workshop",
-                      style: Theme.of(context).textTheme.headlineLarge,
-                    ),
-                    const SizedBox(height: 16),
-                    Text(
-                      "Led an end-to-end UI/UX workshop, & mentoring participants in research.",
-                      style: Theme.of(context).textTheme.bodyMedium,
-                    ),
-                  ],
+                Positioned(
+                  bottom: isMobile ? 24 : 40,
+                  left: isMobile ? 24 : 40,
+                  right: isMobile ? 24 : 40,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Icon(
+                        Icons.play_circle_outline,
+                        color: AppTheme.textWhite,
+                        size: 32,
+                      ),
+                      SizedBox(height: isMobile ? 16 : 32),
+                      Text(
+                        "Workshop",
+                        style: Theme.of(context).textTheme.headlineLarge,
+                      ),
+                      const SizedBox(height: 16),
+                      Text(
+                        "Led an end-to-end UI/UX workshop, & mentoring participants in research.",
+                        style: Theme.of(context).textTheme.bodyMedium,
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
       ),
       ),
     );
